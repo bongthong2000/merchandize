@@ -1,27 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+@font-face {
+    font-family: "KozGo";
+    src: url("../fonts/KozGoPr6N-ExtraLight.otf") format("opentype");
+    font-weight:bold;
+    font-style: normal;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-   font-family: 'Open Sans';
+body {
+    font-family: 'KozGo',sans-serif;
+    background: radial-gradient(
+        circle at center,
+        #023157 0%,
+        #022558 5%,
+        #00112b 30%,
+        #000000 80%
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .container {
     width: 100%;
     overflow: hidden;
-    background-color:#F8EBCF;
+    /* background-color:black; */
 }
+
+/* slide */
 .main-container {
     width: 100%;
     overflow: hidden;
-}
-/* slide */
-.slider {
+} 
+ .slider {
     display: flex;
     width: max-content;
     animation: slide 50s linear infinite;
+    will-change: transform;
 }
 .sliders {
     display: flex;
@@ -36,37 +52,61 @@ body{
 .slideImg img {
     display: block;
     height: 100%;
-    width: auto;
+    width: auto; 
     max-width: none;
     border: 0;
     margin: 0;
     padding: 0;
-}
+    object-fit:contain;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    margin-right: -1px;
+} 
 @keyframes slide {
     from {
         transform: translateX(0);
     }
     to {
         transform: translateX(-50%);
-    } 
-}
-
-
-
+    }
+} 
 /* blog-menu------- */
-.blog-menu .icon-menu{
+.blog-menu .blog-icon{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position:fixed;
-    top:50px;
-    left: 50px;
+    top:30px;
+    padding: 0px 50px;
     z-index: 1;
+    margin:auto;
 }
-.blog-menu .icon-menu button{
-    font-size: 2rem;
+.blog-icon .icon-media {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-icon .icon-media a{
+    margin-left: 70px;
+    text-decoration: none;
+}
+.blog-icon .icon-media  img {
+    width: 25px;
+    object-fit: contain;
+}
+.blog-menu .blog-icon .icon-menu button{
+    width: 40px;
+    height: 40px;
     color: white;
     border: none;
     outline: none;
     cursor: pointer;
     background: none;
+}
+.blog-menu .blog-icon .icon-menu button img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .blog-menu .menu {
     position: fixed;
@@ -76,7 +116,7 @@ body{
     overflow: hidden;
     white-space: nowrap;
     transition: all 0.8s ease-in-out;
-    background-color:#f5ebdb; 
+    background-color:#f7f4f4; 
 }
 .blog-menu .menu.active{
     width: 20%;
@@ -90,16 +130,24 @@ body{
 }
 .blog-menu .menu .icon-bit h4{
     font-size: 1.2rem;
+    color:#606060;
     margin-left: 70px;
     letter-spacing: 10px;
 }
 .blog-menu .menu .icon-bit button{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    width: 20px;
+    height: 20px;
     border: none;
     outline: none;
     cursor: pointer;
-    color:#3D2314;
+    /* color:#404142; */
     background: none;
+}
+.blog-menu .menu .icon-bit button img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 .menu .menus{
     width: 100%;
@@ -117,15 +165,15 @@ body{
     text-decoration: none;
     font-size: 1.2rem;
     padding:20px 35px ;
-    color:#3D2314;
+    color:#606060;
 }
 .menus ul li a:hover{
     color:rgb(179, 138, 5);
-    background-color:#F8EBCF;
+    background-color:#faf9f9;
 }
 .menus ul li a.active{
     color:rgb(179, 138, 5);
-    background-color:#F8EBCF;
+    background-color:#faf9f9;
 }
 /*main----- */
 .container .main{
@@ -137,7 +185,8 @@ body{
     justify-content: center;
 }
 .main .logoImg {
-    width: 60%;
+    width: 20%;
+    margin: 100px 0px;
 }
 .main .logoImg img{
     width: 100%;
@@ -148,13 +197,13 @@ body{
 }
 .blog-bio span{
     font-size: 1.2rem;
-    color:#3D2314;
+    color:#ffffff;
     letter-spacing: 25px;
     font-weight: 600;
 }
 .blog-bio p{
     font-size: 1.2rem;
-    color:#3D2314;
+    color:#ffffff;
 }
 .blog-bio .first-text{
     margin-bottom: 100px;
@@ -172,19 +221,22 @@ body{
     font-size: 1.2rem;
     letter-spacing: 25px;
     font-weight: 600;
-    color:#3D2314;
+    color:#ffffff;
 }
 .button{
-    margin-top:50px;
+    margin-top: 100px;
 }
 .button button{
+    width: 100px;
+    height: 100px;
     border: none;
     outline: none;
     cursor: pointer;
     background: none;
 }
 .button button img{
-    width: 10%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 .video{
@@ -206,32 +258,33 @@ body{
     margin: 25px 0px;
     font-size: 3rem;
     text-align: center;
-    color:#3D2314;
+    color:#ffffff;
 }
 .form form{
     display: flex;
     flex-direction: column;
 }
 .form form label{
-
-   font-size: 1.2rem;
-   padding: 10px 0px;
-   margin-top: 5px;
+    color:#ffffff;
+    font-size: 1.2rem;
+    padding: 10px 0px;
+    margin-top: 5px;
 }
 .form form input{
     font-size: 1.2rem;
-    color: #3D2314;
+    color:#ffffff;
     padding: 10px;
     outline: none;
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 2px solid #3D2314;
+    border-bottom: 1px solid #ffffff;
     background: none;
 }
 .btn button {
     font-size: 1.2rem;
-    color:#FF4F47;
+    /* color:#FF4F47; */
+    color: orangered;
     border: none;
     outline:none;
     cursor: pointer;
@@ -243,22 +296,32 @@ body{
 .btn .btn-submit{
     margin-left: 20px;
 }
-.imgFoot{
+.imgFooter{
     width: 80%;
     margin-top: 50px;
+    padding-top: 50px;
     display: flex;
     justify-content:space-between;
     align-items: center;
-    border-top: 2px solid #3D2314;
+    border-top: 1px solid #ffffff;
+    /* background-color:#300303; */
 }
-.imgFoot .img{
-    width: 30%;
+
+.imgFooter  .img{
+    /* width: 30%; */
+    /* flex: 1;
+    display: flex;
+    justify-content: center; */
+    margin-left: 180px;
 }
-.imgFoot .img img{
-    width: 100%
+.imgFooter  .img img{
+    width: 55%;
+    display: block; 
+    object-fit: contain;
 }
-.imgFoot p{
+.imgFooter p{
     font-size: 1.2rem;
+    color:#ffffff;
 }
 .footer{
     width: 100%;
@@ -271,15 +334,16 @@ body{
     text-align: center;
 }
 .footer .text p{
-   font-size: 1.2rem;
-   line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color:#ffffff;
 }
 .footer .text .p{
-   margin:20px 0px;
+    margin:20px 0px;
 }
 .footer .thanks{
-    margin-top: 50px;
-    width: 20%;
+    margin-top: 70px;
+    width: 12%;
 }
 .footer .thanks img{
     width: 100%;
