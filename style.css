@@ -1,6 +1,6 @@
 @font-face {
     font-family: "KozGo";
-    src: url("../fonts/KozGoPr6N-ExtraLight.otf") format("opentype");
+    src: url("./fonts/KozGoPr6N-ExtraLight.otf") format("opentype");
     font-weight:bold;
     font-style: normal;
 }
@@ -165,7 +165,7 @@ body {
     text-decoration: none;
     font-size: 1.2rem;
     padding:20px 35px ;
-    color:#606060;
+    color:#3D2314;
 }
 .menus ul li a:hover{
     color:rgb(179, 138, 5);
