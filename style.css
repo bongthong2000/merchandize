@@ -13,11 +13,10 @@ body {
     font-family: 'KozGo',sans-serif;
     background: radial-gradient(
         circle at center,
-        #023157 0%,
-        #022558 5%,
-        #00112b 30%,
-        #000000 80%
+        #020f3b,
+        #000001
     );
+  
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -70,8 +69,150 @@ body {
         transform: translateX(-50%);
     }
 } 
+.blog-menu .blog-icon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    padding: 0 50px;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.blog-menu .blog-icon .icon-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.blog-menu .blog-icon .icon-menu h4 {
+    font-family: "Niradei", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 10px;
+    color: white;
+    margin: 0;
+}
+
+
+
+.blog-menu .blog-icon .icon-menu button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+}
+.blog-menu .blog-icon .icon-menu button img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+.blog-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* .blog-media.hide {
+  display: none;
+} */
+.blog-icon .blog-media .icon-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.blog-icon .icon-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 0;
+}
+
+.blog-icon .icon-media a .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.blog-icon .icon-media a .icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.blog-media .searching {
+    width: 0;
+    padding: 0;
+    margin-right: 5px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: all 1s ease;
+    box-sizing: border-box;
+    background-color: rgb(248, 247, 247);
+}
+.blog-media .searching.active {
+    width: 300px;
+}
+
+.blog-media .searching input {
+    font-family: 'KozGo',sans-serif;
+    width: 100%;
+    min-width: 0;
+    outline: none;
+    font-size: 1rem;
+    padding:2px 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background: none;
+}
+.blog-media .btn-search {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.blog-media .btn-search button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.blog-media .btn-search button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.hide{
+    display: none !important;
+}
+
+/* .blog-media .btn-search .bit-search{
+    display:block;
+} */
 /* blog-menu------- */
-.blog-menu .blog-icon{
+/* .blog-menu .blog-icon{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -107,7 +248,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
-}
+} */
 .blog-menu .menu {
     position: fixed;
     width: 0%;
@@ -204,6 +345,7 @@ body {
 .blog-bio p{
     font-size: 1.2rem;
     color:#ffffff;
+     line-height: 2;
 }
 .blog-bio .first-text{
     margin-bottom: 100px;
@@ -212,7 +354,7 @@ body {
     margin-top: 70px;
 } 
 .main .imageSite{
-    width: 40%;
+    width: 25%;
 }
 .main .imageSite img{
     width: 100%;
@@ -271,6 +413,7 @@ body {
     margin-top: 5px;
 }
 .form form input{
+    font-family: 'KozGo',sans-serif;
     font-size: 1.2rem;
     color:#ffffff;
     padding: 10px;
@@ -283,7 +426,6 @@ body {
 }
 .btn button {
     font-size: 1.2rem;
-    /* color:#FF4F47; */
     color: orangered;
     border: none;
     outline:none;
@@ -304,7 +446,6 @@ body {
     justify-content:space-between;
     align-items: center;
     border-top: 1px solid #ffffff;
-    /* background-color:#300303; */
 }
 
 .imgFooter  .img{
@@ -321,7 +462,7 @@ body {
 }
 .imgFooter p{
     font-size: 1.2rem;
-    color:#ffffff;
+    color:#606060;
 }
 .footer{
     width: 100%;
@@ -335,8 +476,8 @@ body {
 }
 .footer .text p{
     font-size: 1.2rem;
-    line-height: 1.5;
-    color:#ffffff;
+    line-height: 2;
+    color:#606060;
 }
 .footer .text .p{
     margin:20px 0px;
